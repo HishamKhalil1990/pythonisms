@@ -5,7 +5,7 @@ class Node:
         self.value = value
         self.next = None
 
-class LinkedList:
+class Linked_List:
     def __init__(self):
         self.head = None
    
@@ -110,7 +110,7 @@ def validate_coditions(func):
             output = func(*args,**kwargs)
             return output
         else:
-            print("passed arguments don't match")
+            return "passed arguments don't match"
     return wrapper
 
 @validate_coditions
@@ -118,7 +118,7 @@ def user(name,age):
     print(f"your name is {name}, and your age is {age}")
 
 if __name__ == "__main__":
-    ll = LinkedList()
+    ll = Linked_List()
     ll.append(1)
     ll.append(2)
     ll.append(3)
@@ -129,14 +129,14 @@ if __name__ == "__main__":
         print(node)
     print([node for node in ll])
     print(tuple(ll))
-    ll2 = LinkedList()
+    ll2 = Linked_List()
     ll2.append(1)
     ll2.append(2)
     ll2.append(3)
     ll2.append(4)
     ll2.append(5)
-    ll2.append(6)
-    ll3 = LinkedList()
+    ll2.append(7)
+    ll3 = Linked_List()
     print(ll == ll2)
     assert ll
     assert not ll3
@@ -145,4 +145,4 @@ if __name__ == "__main__":
     counter_down(5)
     print(add(11,6))
     user("hisham",31)
-    user("hisham","31")
+    print(user("hisham","31"))
